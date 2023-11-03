@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -8,18 +8,39 @@
     <title>UOC Boilerplate</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title"><i class="fas fa-university">Hello, UOC!</i></h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+    <div class="menu">
+      <h1 class="title">Kickboxing</h1>
+      <ul>
+        <li><a href="#clases">Clases</a></li>
+        <ul>
+          <li><a href="#tradicional">Tradicional</a></li>
+          <li><a href="#competicion">Competición</a></li>
+        </ul>
+        <li><a href="#unete">Únete</a></li>
+        <li><a href="#entrenamiento">Primer Entrenamiento</a></li>
+      </ul>
+    </div>
+    <div class ="content">
+      <div>
+        <h1 class="title">Bienvenidos a Nuestra Escuela de Kickboxing</h1>
+        <p>¡Bienvenidos a nuestra apasionante escuela de kickboxing! En esta página, te invitamos a explorar el emocionante mundo del kickboxing y descubrir por qué somos la mejor elección para aquellos que buscan entrenar, aprender y disfrutar de esta emocionante disciplina.</p>
+        <img class="logo" src="./assets/images/logo-kick.png?width=300" alt="Logo escuela">
+      </div>
+      <div>
+        <h1 class="title" id="clases">Clases de Kickboxing</h1>
+        <h2 class="title" id="tradicional">Kickboxing Tradicional</h2>
+        <p>Nuestras clases de kickboxing tradicional ofrecen una base sólida en las técnicas y principios fundamentales de este deporte. Aprenderás los golpes, patadas, y defensas esenciales, mientras mejoras tu condición física y confianza en ti mismo.</p>
+        <h2 class="title" id="competicion">Kickboxing de Competición</h2>
+        <p>Para aquellos que aspiran a competir en el ring, ofrecemos clases de kickboxing de competición. Aquí, te prepararás a fondo para enfrentarte a oponentes en un ambiente de combate, perfeccionando tus habilidades y estrategias.</p>
+      </div>
+      <div>
+        <h1 class="title" id="unete">Únete a Nuestra Comunidad</h1>
+        <p>En nuestra escuela de kickboxing, no solo te convertirás en un experto en esta disciplina, sino que también te unirás a una comunidad apasionada y solidaria de entusiastas del kickboxing. Nuestros instructores experimentados y compañeros de entrenamiento te brindarán el apoyo que necesitas para alcanzar tus metas.</p>
+      </div>
+      <div>
+        <h1 class="title" id="entrenamiento">Planifica Tu Primer Entrenamiento</h1>
+        <p>¿Listo para dar el primer paso hacia una experiencia emocionante? Contáctanos hoy para obtener más información sobre nuestras clases, horarios y tarifas. Te estamos esperando para que te unas a nuestra escuela de kickboxing y comiences tu viaje hacia la mejora física y mental.</p>
+      </div>
     </div>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->

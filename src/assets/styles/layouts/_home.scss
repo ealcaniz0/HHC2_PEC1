@@ -1,57 +1,106 @@
+@use "sass:math";
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  margin: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  font-family: $fontf-serif;
+  font-size: $font-size;
+  line-height: 24px;  
+  background-color: $c-white;
+  color: $c-black;
+  @media (max-width: $mqMinWidth) {    
+    font-size: ($font-size - 5px);
+  }
+}
+
+.menu {
+  position: fixed;
+  overflow: auto;
+  height: 100%;
+  width: $menuWidth;
+  background-color: $c-white;
+  border-style: solid;
+  border-color: $c-blue2;
+  border-width: 10px;
+  padding: 10px;
+  ul {
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 20px;
+    @media (max-width: $mqMinWidth) {    
+      display: flex;
+      padding-left: 0;
+    }
+  }
+  li {
+    padding-top: 10px;
+    @media (max-width: $mqMinWidth) { 
+      padding-top: 0;   
+      padding-left: 10px;
+    }
+  }
+  @media (max-width: $mqMinWidth) {    
+    height: $menuHeight;
+    width: 100%;
+  }
+}
+a {
+  text-decoration: none;
+  color: $c-black;
+}
+h1,h2 {
+  display: flex;
+  align-items: center;
+  height: 50px;
   margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  font-size: ($font-size + 10px);
+  background-color: $c-blue1;
+  color: $c-white;
+  padding-left: 20px;
+  @media (max-width: $mqMinWidth) {    
+    font-size: $font-size;
+  }
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+h2 {
+  margin-top: 5px;
+  background-color: $c-blue2;
 }
 
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
+.content {
+  margin-left: $menuWidth;
+  padding: 20px;
+  @media (max-width: $mqMinWidth) {    
+    margin-top: $menuHeight;
+    margin-left: 0;
+  }
+  div {
+    margin-bottom: 10px;
+  }
+}
+
+.logo {
   max-width: 200px;
   height: auto;
-
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   @media (min-width: $mqMinWidth) {
     max-width: none;
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
-}
-
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
+.footer {
+  margin-top: 20px;
+  margin-left: $menuWidth;
+  font-size: ($font-size - 5px);
   text-align: center;
+  @media (max-width: $mqMinWidth) {    
+    margin-left: 0;
+  }
 }
